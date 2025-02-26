@@ -10,7 +10,7 @@ import ringVideo from "/assets/video/ringVideo.mov";
 
 // Import images properly
 import ringsImg from "/assets/img/rings.png";
-import banglesImg from "/assets/img/b5.png";
+import banglesImg from "/assets/img/bengals.png";
 import necklacesImg from "/assets/img/necklaces.png";
 import chainsImg from "/assets/img/chains.png";
 import mangalsutraImg from "/assets/img/mangalsutra.png";

@@ -139,7 +139,7 @@ function RingsSection() {
   return (
     <div className="rings-section">
       <div className="hero">
-        <div className="hero-overlay1_RINGS"></div>
+        <div className="hero-overlay1_NECKLACES"></div>
         <div className="container2">
           <div className="hero-content">
             <h1>RINGS</h1>

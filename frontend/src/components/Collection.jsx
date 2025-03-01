@@ -31,6 +31,7 @@ const HeroSection = () => (
       <p className="luxury-subtitle">Your Style, Your Statement</p>
     </div>      
   </div>
+  
 );
 
 const CollectionSection = () => {
@@ -78,7 +79,7 @@ const CollectionSection = () => {
 const JewelryMainContent = () => (
   <div>
     <Navbar />
-    <main className="main-content">
+    <main className="main-content1">
       <HeroSection />
       <CollectionSection />
     </main>

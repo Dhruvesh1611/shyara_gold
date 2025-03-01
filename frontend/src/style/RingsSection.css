@@ -98,17 +98,80 @@
     background-color: var(--hero-bg-color);
     overflow: hidden;
   }
-  
-  .hero-overlay1 {
+
+
+  .hero-overlay1_RINGS {
+    position: absolute;
+    background-image: url(/assets/img/ringbg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    inset: 0px;
+    margin-top: 7%;
+}
+  .hero-overlay1_NECKLACES {
     position: absolute;
     inset: 0;
-    background-image: url(/assets/img/ringbg.png);
-    background-size: contain;
-    
+    background-image: url(/assets/img/Nackless_hero.png);
+    background-size: cover;
     background-repeat: no-repeat;
     margin-top: 7%;
     
   }
+  .hero-overlay1_BANGLES{
+    position: absolute;
+    inset: 0;
+    background-image: url(/assets/img/banglesImg.png);
+    background-size: cover;    
+    background-repeat: no-repeat;
+    margin-top: 7%;
+    
+  }
+  .hero-overlay1_CHAINS {
+    position: absolute;
+    inset: 0;
+    background-image: url(/assets/img/chainhero.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 7%;
+    
+  }
+  .hero-overlay1_MANGALSUTRA {
+    position: absolute;
+    inset: 0;
+    background-image: url(/assets/img/Mangalsutrahero.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 7%;
+    
+  }
+  .hero-overlay1_EARRINGS {
+    position: absolute;
+    inset: 0;
+    background-image: url(/assets/img/earringshero.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 7%;
+    
+  }
+  .hero-overlay1_BRACELETS {
+    position: absolute;
+    inset: 0;
+    background-image: url(/assets/img/bracelatshero.png);
+    background-size: cover;    
+    background-repeat: no-repeat;
+    margin-top: 7%;
+    
+  }
+  .hero-overlay1_PENDANTS {
+    position: absolute;
+    inset: 0;
+    background-image: url(/assets/img/pendantshero.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 7%;
+    
+  }
+  
   
   .hero-content {
     position: relative;
@@ -126,15 +189,6 @@
     color: var(--gray-dark);
     margin-bottom: 1rem;
   }
-  .hero-overlay2 {
-    position: absolute;
-    background-image: url(/assets/img/ringbg.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin-top: 7%;
-    inset: 0px;
-    background-color:#DAD3D3;
-}
   
   .hero-content p {
     font-size: 1.5rem;
@@ -274,7 +328,7 @@
   
   /* Product Card */
   .product-card {
-    background-color: #DAD3D3;
+    background-color: #ddb0bb;
     border-radius: 0.5rem;
     overflow: hidden;
     box-shadow: 0 4px 6px var(--shadow-color);

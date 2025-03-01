@@ -82,11 +82,17 @@
 
    .hero-container {
   position: relative;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   overflow: hidden;
   margin-top: 2%;
 }
+
+
+  .main-content1{
+    margin: 0%;
+  }
+
 
 .hero-video {
   width: 100%;
@@ -95,7 +101,7 @@
 }
 
 .hero-overlay {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.4), transparent) !important;
+  /* background: linear-gradient(to right, rgba(0, 0, 0, 0.4), transparent) !important; */
   position: absolute;
   top: 0;
   left: 0;
@@ -161,7 +167,7 @@
     display: grid;
     grid-template-columns: repeat(auto, 1fr);
     gap: 2rem;
-    padding: 1rem;
+    padding: 0 7rem;
   }
   
   .collection-item {
@@ -184,6 +190,7 @@
   /* Collection Section */
   .collection-section {
     padding: 4rem 0;
+    width: 100vw;
     text-align: center;
     background: linear-gradient(to bottom, #fff5f5, #ffffff);
   }

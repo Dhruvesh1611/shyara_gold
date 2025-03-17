@@ -44,6 +44,8 @@
 }
 
 .why-choose-title {
+  margin-bottom: 3%;
+  border:1px solid red;
   font-size: 1.875rem;
   line-height: 2.25rem;
   margin-bottom: -1rem;

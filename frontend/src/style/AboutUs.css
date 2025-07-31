@@ -34,18 +34,18 @@
   line-height: 2rem;
   font-style: italic;
   color: #d4af37;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 /* Why Choose Us Section */
 .why-choose-section {
+  margin-top: 2rem;
   margin-bottom: 1rem;
   margin-left: 5%;
 }
 
 .why-choose-title {
   margin-bottom: 3%;
-  border:1px solid red;
   font-size: 1.875rem;
   line-height: 2.25rem;
   margin-bottom: -1rem;

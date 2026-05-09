@@ -16,9 +16,7 @@ import UserPanel from "./components/UserPanel";
 import AdminPanel from "./components/AdminPanel";
 import OwnerPanel from "./components/OwnerPanel";
 import Login from "./components/Login";
-import Login from "./components/Login";
 import Signup from "./components/Signup";
-import ProtectedRoute from "./components/ProtectedRoute"
 import AdminDashboard from "./components/AdminDashboard"
 import OwnerDashboard from "./components/OwnerDashboard"
 import "./App.css";
@@ -40,12 +38,12 @@ function AppContent() {
   return (
     <>
       <ScrollToTop />
-      
+
       {/* ✅ Hide Navbar on Login Page */}
       {shouldShowNavbar && <Navbar />}
 
       <Routes>
-        <Route path="/" element={<Navigate to="/login" />}/> {/* ✅ Correct usage */}
+        <Route path="/" element={<Navigate to="/login" />} /> {/* ✅ Correct usage */}
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/home" element={<Home_page />} />
@@ -74,40 +72,6 @@ function App() {
     <SearchProvider>
       <Router>
         {loading ? <Spinner /> : <AppContent />}
-        {loading ? ( 
-          <Spinner /> 
-        ) : ( 
-          <div style={{ opacity: 1, transition: "opacity 0.5s ease-in-out" }}>
-            <ScrollToTop /> {/* Ensures scrolling to top on navigation */}
-            <Navbar />
-            <Routes>
-              {/* Public Routes */}
-              <Route path="/" element={<Home_page />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/signup" element={<Signup />} />
-              <Route path="/about" element={<AboutUs />} />
-              <Route path="/contact" element={<ContactUs />} />
-              <Route path="/collection" element={<><Breadcrumb /><Collection /></>} />
-              <Route path="/collection/ring" element={<><Breadcrumb /><RingsSection /></>} />
-              <Route path="/collection/bangles" element={<BanglesPage />} />
-              
-              {/* Protected Routes - Require Authentication */}
-              <Route element={<ProtectedRoute />}>
-                <Route path="/users-collection" element={<UsersCollection />} />
-              </Route>
-              
-              {/* Admin Routes - Require Admin Role */}
-              <Route element={<ProtectedRoute requiredRole="admin" />}>
-                <Route path="/admin-dashboard" element={<AdminDashboard />} />
-              </Route>
-              
-              {/* Owner Routes - Require Owner Role */}
-              <Route element={<ProtectedRoute requiredRole="owner" />}>
-                <Route path="/owner-dashboard" element={<OwnerDashboard />} />
-              </Route>
-            </Routes>
-          </div>
-        )}
       </Router>
     </SearchProvider>
   );

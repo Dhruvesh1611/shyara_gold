@@ -7,6 +7,7 @@ const cloudinary = require('./config/cloudinaryConfig');
 const connectUserDB = require('./.config/mongoDB.config');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
+const userRoutes = require('./routes/userRegisteration');
 require('dotenv').config();
 
 const app = express();
@@ -55,6 +56,9 @@ async function initializeDatabase() {
     }
 }
 initializeDatabase();
+
+// Mount user registration routes
+app.use('/auth', userRoutes);
 
 // Middleware to verify JWT
 const authenticateToken = (req, res, next) => {

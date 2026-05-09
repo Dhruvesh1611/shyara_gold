@@ -12,7 +12,7 @@ const Register = () => {
     const handleRegister = async (e) => {
         e.preventDefault();
         try {
-            const { data } = await axios.post('http://localhost:5000/auth/newuser', {
+            const { data } = await axios.post('http://localhost:5001/auth/newuser', {
                 email,
                 password,
                 role
@@ -26,7 +26,7 @@ const Register = () => {
     };
 
     return (
-        <div style={{ maxWidth: '400px', margin: '50px auto', marginTop:'10em' , padding: '20px', border: '1px solid #ccc', borderRadius: '5px' }}>
+        <div style={{ maxWidth: '400px', margin: '50px auto', marginTop: '10em', padding: '20px', border: '1px solid #ccc', borderRadius: '5px' }}>
             <h2>Create Account</h2>
             {error && <p style={{ color: 'red' }}>{error}</p>}
             <form onSubmit={handleRegister}>

@@ -24,7 +24,7 @@ import { isAuthenticated, hasRole } from '../utils/auth';
 const ProtectedRoute = ({ requiredRole }) => {
   // Check if user is authenticated
   const authenticated = isAuthenticated();
-  
+
   // If role is required, check if user has that role
   const authorized = requiredRole ? hasRole(requiredRole) : true;
 
@@ -32,7 +32,7 @@ const ProtectedRoute = ({ requiredRole }) => {
   if (!authenticated) {
     return <Navigate to="/login" replace />;
   }
-  
+
   // If authenticated but not authorized (wrong role), redirect to home
   if (authenticated && !authorized) {
     return <Navigate to="/" replace />;
@@ -42,4 +42,4 @@ const ProtectedRoute = ({ requiredRole }) => {
   return <Outlet />;
 };
 
-export default ProtectedRoute; \
+export default ProtectedRoute;

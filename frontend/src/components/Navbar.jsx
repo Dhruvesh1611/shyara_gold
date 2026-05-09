@@ -17,7 +17,6 @@ const Navbar = () => {
   const navigate = useNavigate();
   const { searchQuery, setSearchQuery } = useSearch(); // Get global search state
   const [usertype, setusertype] = useState("user")
-  const { searchQuery, setSearchQuery } = useSearch();
   const [authenticated, setAuthenticated] = useState(isAuthenticated());
   const [user, setUser] = useState(getCurrentUser());
   // Mock data for search results
@@ -35,12 +34,12 @@ const Navbar = () => {
       try {
         const userDataRaw = await UserProfileStorageGetter('user_credentials_config');
         console.log("Retrieved User Data:", userDataRaw); // Debugging
-        
+
         if (!userDataRaw || !userDataRaw.data) {
           console.warn("User data is missing or undefined.");
           return;
         }
-  
+
         const parsedData = JSON.parse(userDataRaw.data); // Ensure it's valid JSON
         if (parsedData && parsedData.role) {
           setusertype(parsedData.role);
@@ -51,7 +50,7 @@ const Navbar = () => {
         console.error("Error parsing user data:", error);
       }
     })();
-  
+
     const handleEscape = (e) => {
       if (e.key === "Escape") {
         setMenuOpen(false);
@@ -66,16 +65,16 @@ const Navbar = () => {
         setSearchFocused(false);
       }
     };
-  
+
     document.addEventListener("keydown", handleEscape);
     document.addEventListener("mousedown", handleClickOutside);
-    
+
     return () => {
       document.removeEventListener("keydown", handleEscape);
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
-  
+
 
   // Disable body scroll when menu is open
   useEffect(() => {
@@ -106,8 +105,8 @@ const Navbar = () => {
     if (searchQuery.trim()) {
       const query = searchQuery.toLowerCase();
       const results = mockProducts.filter(
-        product => 
-          product.name.toLowerCase().includes(query) || 
+        product =>
+          product.name.toLowerCase().includes(query) ||
           product.category.toLowerCase().includes(query)
       );
       setSearchResults(results);
@@ -225,12 +224,12 @@ const Navbar = () => {
               </li>
             )
           }
-    
+
           {/* Authentication Links */}
           {authenticated ? (
             <>
               <li className="user-menu-container">
-                <button 
+                <button
                   className="user-menu-button"
                   onClick={() => setUserMenuOpen(!userMenuOpen)}
                 >
